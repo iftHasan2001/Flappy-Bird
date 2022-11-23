@@ -1,0 +1,17 @@
+//moon
+	glBegin(GL_POLYGON);
+            int i,x,y
+		glColor3ub(255, 255, 255);
+		float mx=355;
+		float my=360;
+
+		for(i=0;i<=(2*3.14);i+=0.0001)
+		{
+            x=35*cos(i);
+		y=35*sin(i);
+
+			glVertex2f(x+mx,y+my);
+
+		}
+
+	glEnd();
