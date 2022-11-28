@@ -1,0 +1,90 @@
+glBegin(GL_TRIANGLE_FAN);
+
+        glColor3ub(224, 202, 0);
+        float x1=57;
+        float y1=430;
+
+        for(i=0;i<=(2*3.14);i+=0.0001)
+        {
+
+            x=22*sin(i);
+            y=17*cos(i);
+            glVertex2f(x+x1,y+birdIndex+y1);
+
+        }
+
+    glEnd();
+
+     glBegin(GL_TRIANGLE_FAN);
+        glColor3ub(255, 255, 255);
+        float x3=66;
+        float y3=435;
+        for(i=0;i<=(2*3.14);i+=0.0001)
+        {
+            x=6*sin(i);
+            y=6*cos(i);
+            glVertex2f(y+x3,x+birdIndex+y3);
+        }
+    glEnd();
+
+    glBegin(GL_TRIANGLE_FAN);
+        glColor3ub(0, 0, 0);
+        float x4=66;
+        float y4=435;
+        for(i=0;i<=(23.14)/2;i+=0.0001)
+        {
+            x=3*sin(i);
+            y=3*cos(i);
+            glVertex2f(y+x4,x+birdIndex+y4);
+        }
+    glEnd();
+
+    //tail
+    glBegin(GL_POLYGON);
+    glColor3ub(255, 0, 0);
+    glVertex2i(38, birdIndex+438);
+    glVertex2i(23, birdIndex+443);
+    glVertex2i(23, birdIndex+435);
+    glVertex2i(37, birdIndex+430);
+
+    glVertex2i(27, birdIndex+435);
+    glVertex2i(27, birdIndex+425);
+    glVertex2i(37, birdIndex+423);
+    glEnd();
+
+    glBegin(GL_LINES);
+    glColor3ub(0, 0, 0);
+    glVertex2i(23, birdIndex+435);
+    glVertex2i(37, birdIndex+430);
+    glEnd();
+
+    //feather
+    glBegin(GL_LINES);
+    glColor3ub(0, 0, 0);
+    glVertex2i(57, birdIndex+430);
+    glVertex2i(41, birdIndex+440);
+
+    glVertex2i(41, birdIndex+440);
+    glVertex2i(41, birdIndex+427);
+
+    glVertex2i(40, birdIndex+427);
+    glVertex2i(57, birdIndex+422);
+    glEnd();
+
+
+    //lips
+    glBegin(GL_TRIANGLES);
+    glColor3ub(255, 0, 0);
+    glVertex2i(79, birdIndex+430);
+    glVertex2i(93, birdIndex+430);
+    glVertex2i(75, birdIndex+440);
+    glEnd();
+
+    glBegin(GL_TRIANGLES);
+    glColor3ub(255, 0, 0);
+    glVertex2i(74, birdIndex+420);
+    glVertex2i(90, birdIndex+427);
+    glVertex2i(79, birdIndex+427);
+
+
+    glEnd();
