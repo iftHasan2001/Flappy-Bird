@@ -1,6 +1,20 @@
+#include<windows.h>
+#include<stdio.h>
+#include <GL/glut.h>
+#include <iostream>
+#include <string>
+#include<math.h>
+int birdIndex = 0;
+float x,y,i;
+void myDisplay(void)
+{
+glClear (GL_COLOR_BUFFER_BIT);
+glColor3ub (128, 128, 128);
+glPointSize(5.0);
+
 //moon
 	glBegin(GL_POLYGON);
-            int i,x,y
+
 		glColor3ub(255, 255, 255);
 		float mx=355;
 		float my=360;
@@ -8,10 +22,128 @@
 		for(i=0;i<=(2*3.14);i+=0.0001)
 		{
             x=35*cos(i);
-		y=35*sin(i);
+		    y=35*sin(i);
 
 			glVertex2f(x+mx,y+my);
 
 		}
 
 	glEnd();
+glBegin(GL_POLYGON);
+
+        glColor3ub(224, 202, 0);
+        float x1=57;
+        float y1=430;
+
+        for(i=0;i<=(2*3.14);i+=0.0001)
+        {
+
+            x=22*sin(i);
+            y=17*cos(i);
+            glVertex2f(x+x1,y+birdIndex+y1);
+
+        }
+
+    glEnd();
+
+     glBegin(GL_POLYGON);
+        glColor3ub(255, 255, 255);
+        float x3=66;
+        float y3=435;
+        for(i=0;i<=(2*3.14);i+=0.0001)
+        {
+            x=6*sin(i);
+            y=6*cos(i);
+            glVertex2f(y+x3,x+birdIndex+y3);
+        }
+    glEnd();
+
+    glBegin(GL_POLYGON);
+        glColor3ub(0, 0, 0);
+        float x4=66;
+        float y4=435;
+        for(i=0;i<=(23.14)/2;i+=0.0001)
+        {
+            x=3*sin(i);
+            y=3*cos(i);
+            glVertex2f(y+x4,x+birdIndex+y4);
+        }
+    glEnd();
+
+    //tail
+    glBegin(GL_POLYGON);
+    glColor3ub(255, 0, 0);
+    glVertex2i(38, birdIndex+438);
+    glVertex2i(23, birdIndex+443);
+    glVertex2i(23, birdIndex+435);
+    glVertex2i(37, birdIndex+430);
+
+    glVertex2i(27, birdIndex+435);
+    glVertex2i(27, birdIndex+425);
+    glVertex2i(37, birdIndex+423);
+    glEnd();
+
+    glBegin(GL_LINES);
+    glColor3ub(0, 0, 0);
+    glVertex2i(23, birdIndex+435);
+    glVertex2i(37, birdIndex+430);
+    glEnd();
+
+    //feather
+    glBegin(GL_LINES);
+    glColor3ub(0, 0, 0);
+    glVertex2i(57, birdIndex+430);
+    glVertex2i(41, birdIndex+440);
+
+    glVertex2i(41, birdIndex+440);
+    glVertex2i(41, birdIndex+427);
+
+    glVertex2i(40, birdIndex+427);
+    glVertex2i(57, birdIndex+422);
+    glEnd();
+
+
+    //lips
+    glBegin(GL_POLYGON);
+    glColor3ub(255, 0, 0);
+    glVertex2i(79, birdIndex+430);
+    glVertex2i(93, birdIndex+430);
+    glVertex2i(75, birdIndex+440);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3ub(255, 0, 0);
+    glVertex2i(74, birdIndex+420);
+    glVertex2i(90, birdIndex+427);
+    glVertex2i(79, birdIndex+427);
+
+
+    glEnd();
+
+glFlush ();
+}
+
+void myInit (void)
+{
+glClearColor(0.0, 0.0, 0.0, 0.0);
+glMatrixMode(GL_PROJECTION);
+glLoadIdentity();
+gluOrtho2D(0.0, 640.0, 0.0, 480.0);
+}
+
+
+
+
+
+int main(int argc, char** argv)
+{
+glutInit(&argc, argv);
+glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
+glutInitWindowSize (640, 480);
+glutInitWindowPosition (100, 150);
+glutCreateWindow ("");
+glutDisplayFunc(myDisplay);
+myInit ();
+glutMainLoop();
+}
+
