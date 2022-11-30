@@ -11,8 +11,74 @@ void myDisplay(void)
 glClear (GL_COLOR_BUFFER_BIT);
 glColor3ub (128, 128, 128);
 glPointSize(5.0);
+//cloud1
+glBegin(GL_POLYGON);
+//left half circle
+		glColor3ub(194, 188, 188);
+		float xb1=100;
+		float yb1=350;
 
-//moon
+
+		for(i=0;i<=(2*3.14)/2;i+=0.0001)
+		{
+
+			x=35*cos(i);
+			y=50*sin(i);
+			glVertex2f(x+xb1,y+yb1);
+
+		}
+
+	glEnd();
+	glBegin(GL_POLYGON);
+//Right half circle
+		glColor3ub(194, 188, 188);
+		float xb2=170;
+		float yb2=350;
+
+		for(i=0;i<=(2*3.14)/2;i+=0.0001)
+		{
+
+			x=35*cos(i);
+			y=50*sin(i);
+			glVertex2f(x+xb2,y+yb2);
+
+		}
+
+	glEnd();
+	glBegin(GL_POLYGON);
+//middle half circle
+		glColor3ub(194, 188, 188);
+		float xb3=135;
+		float yb3=350;
+
+
+		for(i=0;i<=(2*3.14)/2;i+=0.0001)
+		{
+
+			x=35*cos(i);
+			y=60*sin(i);
+			glVertex2f(x+xb3,y+yb3);
+
+		}
+
+	glEnd();
+
+    glBegin(GL_POLYGON);
+//lower half circle
+		glColor3ub(194, 188, 188);
+		float xbx=135;
+		float yby=351;
+
+		for(i=0;i<=(2*3.14)/2;i+=0.0001)
+		{
+            x=70*cos(i);
+			y=15*sin(-i);
+			glVertex2f(x+xbx,y+yby);
+
+		}
+
+	glEnd();
+	//moon
 	glBegin(GL_POLYGON);
 
 		glColor3ub(255, 255, 255);
@@ -29,9 +95,200 @@ glPointSize(5.0);
 		}
 
 	glEnd();
+	//cloud 2
+
+	glBegin(GL_POLYGON);
+
+		glColor3ub(194, 188, 188);
+		float xb4=300;
+		float yb4=300;
+
+		for(i=0;i<=(2*3.14)/2;i+=0.0001)
+		{
+            x=35*cos(i);
+			y=50*sin(i);
+
+			glVertex2f(x+xb4,y+yb4);
+
+		}
+
+	glEnd();
+	glBegin(GL_POLYGON);
+
+		glColor3ub(194, 188, 188);
+		float xb5=370;
+		float yb5=300;
+
+		for(i=0;i<=(2*3.14)/2;i+=0.0001)
+		{
+
+			y=50*sin(i);
+			x=35*cos(i);
+			glVertex2f(x+xb5,y+yb5);
+
+		}
+
+	glEnd();
+	glBegin(GL_POLYGON);
+
+		glColor3ub(194, 188, 188);
+		float xb6=335;
+		float yb6=300;
+
+		for(i=0;i<=(2*3.14)/2;i+=0.0001)
+		{
+            x=35*cos(i);
+			y=60*sin(i);
+
+			glVertex2f(x+xb6,y+yb6);
+
+		}
+
+	glEnd();
+	glBegin(GL_POLYGON);
+
+		glColor3ub(194, 188, 188);
+		float xx1=335;
+		float yy1=300;
+
+		for(i=0;i<=(2*3.14)/2;i+=0.0001)
+		{
+            x=70*cos(i);
+			y=15*sin(-i);
+
+			glVertex2f(x+xx1,y+yy1);
+
+		}
+
+	glEnd();
+
+
+	//cloud3
+	glBegin(GL_POLYGON);
+
+		glColor3ub(194, 188, 188);
+		float xb7=500;
+		float yb7=420;
+
+		for(i=0;i<=(2*3.14)/2;i+=0.0001)
+		{
+            x=35*cos(i);
+			y=50*sin(i);
+
+			glVertex2f(x+xb7,y+yb7);
+
+		}
+
+	glEnd();
+	glBegin(GL_POLYGON);
+
+		glColor3ub(194, 188, 188);
+		float xb8=570;
+		float yb8=420;
+
+		for(i=0;i<=(2*3.14)/2;i+=0.0001)
+		{
+            x=35*cos(i);
+			y=50*sin(i);
+
+			glVertex2f(x+xb8,y+yb8);
+
+		}
+
+	glEnd();
+	glBegin(GL_POLYGON);
+
+		glColor3ub(194, 188, 188);
+		float xb9=535;
+		float yb9=420;
+
+		for(i=0;i<=(2*3.14)/2;i+=0.0001)
+		{
+            x=35*cos(i);
+			y=60*sin(i);
+
+			glVertex2f(x+xb9,y+yb9);
+
+		}
+
+	glEnd();
+
+
+
+	glBegin(GL_POLYGON);
+
+		glColor3ub(194, 188, 188);
+		float xx2=535;
+		float yy2=420;
+
+		for(i=0;i<=(2*3.14)/2;i+=0.0001)
+		{
+            x=70*cos(i);
+			y=15*sin(-i);
+
+			glVertex2f(x+xx2,y+yy2);
+
+		}
+
+	glEnd();
+	//grass middle
+	glBegin(GL_POLYGON);
+
+		glColor3ub(168, 149, 50);
+		float gx1=320;
+		float gy1=0;
+
+		for(i=0;i<=(2*3.14)/2;i+=0.0001)
+		{
+            x=320*cos(i);
+			y=170*sin(i);
+
+			glVertex2f(x+gx1,y+gy1);
+
+		}
+
+	glEnd();
+//grass left
+	glBegin(GL_POLYGON);
+
+		glColor3ub(213, 217, 11);
+		float a=0;
+		float b=0;
+
+		for(i=0;i<=(2*3.14)/2;i+=0.0001)
+		{
+
+			x=300*sin(i);
+			y=200*cos(i);
+			glVertex2f(x+a,y+b);
+
+		}
+
+	glEnd();
+//grass Right
+	glBegin(GL_POLYGON);
+
+		glColor3ub(213, 217, 11);
+		float a1=640;
+		float b1=0;
+
+		for(i=0;i<=(2*3.14)/2;i+=0.0001)
+		{
+
+			x=200*sin(-i);
+			y=150*cos(i);
+			glVertex2f(x+a1,y+b1);
+
+		}
+
+	glEnd();
+
+//Bird
+
+//Body
 glBegin(GL_POLYGON);
 
-        glColor3ub(224, 202, 0);
+        glColor3ub(126, 156, 36);
         float x1=57;
         float y1=430;
 
@@ -45,7 +302,7 @@ glBegin(GL_POLYGON);
         }
 
     glEnd();
-
+//Eye
      glBegin(GL_POLYGON);
         glColor3ub(255, 255, 255);
         float x3=66;
@@ -72,7 +329,7 @@ glBegin(GL_POLYGON);
 
     //tail
     glBegin(GL_POLYGON);
-    glColor3ub(255, 0, 0);
+    glColor3ub(227, 227, 79);
     glVertex2i(38, birdIndex+438);
     glVertex2i(23, birdIndex+443);
     glVertex2i(23, birdIndex+435);
@@ -146,4 +403,5 @@ glutDisplayFunc(myDisplay);
 myInit ();
 glutMainLoop();
 }
+
 
