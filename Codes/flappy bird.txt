@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 #include<math.h>
-int birdIndex = 0;
+int birdIndex = 0, barUp1=0,barUp2=0,barUp3=0,barUp4=0,barUp5=0, barDown1=0,barDown2=0,barDown3=0,barDown4=0,barDown5=0, barUp_y1=0, barUp_y2=0, barUp_y3=0, barUp_y4=0, barUp_y5=0;
 float x,y,i;
 void myDisplay(void)
 {
@@ -378,6 +378,151 @@ glBegin(GL_POLYGON);
     glEnd();
 
 glFlush ();
+}
+
+void startGame(void)
+{
+
+//bar1
+glColor3ub(47, 55, 130);
+glBegin(GL_QUADS);
+glVertex2i(barUp1+480, barUp_y1+480);
+glVertex2i(barUp1+480, barUp_y1+310);
+glVertex2i(barUp1+520, barUp_y1+310);
+glVertex2i(barUp1+520, barUp_y1+480);
+
+glEnd();
+barUp1--;
+
+
+glBegin(GL_QUADS);
+glVertex2i(barDown1+480, barUp_y1+0);
+glVertex2i(barDown1+480, barUp_y1+170);
+glVertex2i(barDown1+520, barUp_y1+170);
+glVertex2i(barDown1+520, barUp_y1+0);
+
+glEnd();
+barDown1--;
+
+}
+//bar2
+glBegin(GL_QUADS);
+glVertex2i(barUp2+620, barUp_y2+480);
+glVertex2i(barUp2+620, barUp_y2+350);
+glVertex2i(barUp2+660, barUp_y2+350);
+glVertex2i(barUp2+660, barUp_y2+480);
+
+glEnd();
+barUp2--;
+
+glBegin(GL_QUADS);
+glVertex2i(barDown2+620, barUp_y2+0);
+glVertex2i(barDown2+620, barUp_y2+210);
+glVertex2i(barDown2+660, barUp_y2+210);
+glVertex2i(barDown2+660, barUp_y2+0);
+
+glEnd();
+barDown2--;
+
+
+//bar3
+glBegin(GL_QUADS);
+glVertex2i(barUp3+760, barUp_y3+480);
+glVertex2i(barUp3+760, barUp_y3+250);
+glVertex2i(barUp3+800, barUp_y3+250);
+glVertex2i(barUp3+800, barUp_y3+480);
+
+glEnd();
+barUp3--;
+
+
+glBegin(GL_QUADS);
+glVertex2i(barDown3+760, barUp_y3+0);
+glVertex2i(barDown3+760, barUp_y3+110);
+glVertex2i(barDown3+800, barUp_y3+110);
+glVertex2i(barDown3+800, barUp_y3+0);
+glVertex2i(barUp4+900, barUp_y4+480);
+glVertex2i(barUp4+900, barUp_y4+390);
+glVertex2i(barUp4+940, barUp_y4+390);
+glVertex2i(barUp4+940, barUp_y4+480);
+
+glEnd();
+barUp4--;
+
+
+glBegin(GL_QUADS);
+glVertex2i(barDown4+900, barUp_y4+0);
+glVertex2i(barDown4+900, barUp_y4+250);
+glVertex2i(barDown4+940, barUp_y4+250);
+glVertex2i(barDown4+940, barUp_y4+0);
+glEnd();
+barDown4--;
+
+
+
+//bar5
+glBegin(GL_QUADS);
+glVertex2i(barUp5+1040, barUp_y5+480);
+glVertex2i(barUp5+1040, barUp_y5+230);
+glVertex2i(barUp5+1080, barUp_y5+230);
+glVertex2i(barUp5+1080, barUp_y5+480);
+glEnd();
+barUp5--;
+
+glBegin(GL_QUADS);
+glVertex2i(barDown5+1040, barUp_y5+0);
+glVertex2i(barDown5+1040, barUp_y5+90);
+glVertex2i(barDown5+1080, barUp_y5+90);
+glVertex2i(barDown5+1080, barUp_y5+0);
+
+glEnd();
+barDown5--;
+
+
+}glEnd();
+barDown3--;
+
+
+//bar4
+glBegin(GL_QUADS);
+glVertex2i(barUp4+900, barUp_y4+480);
+glVertex2i(barUp4+900, barUp_y4+390);
+glVertex2i(barUp4+940, barUp_y4+390);
+glVertex2i(barUp4+940, barUp_y4+480);
+
+glEnd();
+barUp4--;
+
+
+glBegin(GL_QUADS);
+glVertex2i(barDown4+900, barUp_y4+0);
+glVertex2i(barDown4+900, barUp_y4+250);
+glVertex2i(barDown4+940, barUp_y4+250);
+glVertex2i(barDown4+940, barUp_y4+0);
+glEnd();
+barDown4--;
+
+
+
+//bar5
+glBegin(GL_QUADS);
+glVertex2i(barUp5+1040, barUp_y5+480);
+glVertex2i(barUp5+1040, barUp_y5+230);
+glVertex2i(barUp5+1080, barUp_y5+230);
+glVertex2i(barUp5+1080, barUp_y5+480);
+glEnd();
+barUp5--;
+
+glBegin(GL_QUADS);
+glVertex2i(barDown5+1040, barUp_y5+0);
+glVertex2i(barDown5+1040, barUp_y5+90);
+glVertex2i(barDown5+1080, barUp_y5+90);
+glVertex2i(barDown5+1080, barUp_y5+0);
+
+glEnd();
+barDown5--;
+
+
 }
 
 void myInit (void)
