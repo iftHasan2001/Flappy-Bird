@@ -97,7 +97,7 @@ glBegin(GL_POLYGON);
 		}
 
 	glEnd();
-	//moon
+	//Sun
 	glBegin(GL_POLYGON);
 
 		glColor3ub(230, 153, 21);
@@ -250,7 +250,7 @@ glBegin(GL_POLYGON);
 		}
 
 	glEnd();
-	//grass middle
+	//ground middle
 	glBegin(GL_POLYGON);
 
 		glColor3ub(168, 149, 50);
@@ -267,7 +267,7 @@ glBegin(GL_POLYGON);
 		}
 
 	glEnd();
-//grass left
+//ground left
 	glBegin(GL_POLYGON);
 
 		glColor3ub(213, 217, 11);
@@ -284,7 +284,7 @@ glBegin(GL_POLYGON);
 		}
 
 	glEnd();
-//grass Right
+//ground Right
 	glBegin(GL_POLYGON);
 
 		glColor3ub(213, 217, 11);
