@@ -336,7 +336,7 @@ glBegin(GL_POLYGON);
         {
             x=6*sin(i);
             y=6*cos(i);
-            glVertex2f(y+x3,x+birdIndex+y3);
+            glVertex2f(x+x3,y+birdIndex+y3);
         }
     glEnd();
 
@@ -348,7 +348,7 @@ glBegin(GL_POLYGON);
         {
             x=3*sin(i);
             y=3*cos(i);
-            glVertex2f(y+x4,x+birdIndex+y4);
+            glVertex2f(x+x4,y+birdIndex+y4);
         }
     glEnd();
 
